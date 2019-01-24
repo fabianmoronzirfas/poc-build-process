@@ -8,7 +8,7 @@ git config --global push.default current
 git stash
 git checkout master
 git fetch --all
-git checkout -b gh-pages --track origin/gh-pages
+git checkout -b gh-pages
 rm -rf dist/
 git stash pop
 find . -type d ! -regex 'dist|.travis' -delete
