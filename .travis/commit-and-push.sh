@@ -7,7 +7,7 @@ git config --global user.name "Travis CI"
 git config --global push.default current
 git stash
 git fetch --all
-git checkout gh-pages origin/gh-pages
+git checkout -b gh-pages origin/gh-pages
 git stash pop
 find . -type d ! -regex 'dist|.travis' -delete
 mv dist/* .
@@ -16,3 +16,4 @@ git add .
 git commit -m "auto-update with travis ${TODAY}"
 git push https://${TRAVIS_DEPLOY_TOKEN}@@github.com/fabianmoronzirfas/poc-build-process.git
 # outta here
+# even more
