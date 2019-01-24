@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -eu pipefail
 IFS=$'\n\t'
 TODAY=$(date)
 git config --global user.email "travis@travis-ci.org"
