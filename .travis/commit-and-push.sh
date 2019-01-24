@@ -6,8 +6,6 @@ git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
 git config --global push.default current
 git stash
-git checkout master
-git fetch --all
 git checkout -b gh-pages
 rm -rf dist/
 git stash pop
@@ -16,6 +14,6 @@ mv dist/* .
 rm -r .travis/
 git add .
 git commit -m "auto-update with travis ${TODAY}"
-git push https://${TRAVIS_DEPLOY_TOKEN}@@github.com/fabianmoronzirfas/poc-build-process.git
+git push -f https://${TRAVIS_DEPLOY_TOKEN}@@github.com/fabianmoronzirfas/poc-build-process.git
 # outta here
 # even more
