@@ -6,7 +6,8 @@ git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
 git config --global push.default current
 git stash
-git checkout gh-pages
+git fetch --all
+git checkout gh-pages origin/gh-pages
 git stash pop
 find . -type d ! -regex 'dist|.travis' -delete
 mv dist/* .
